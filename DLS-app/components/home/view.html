@@ -1,0 +1,15 @@
+<div data-role="view" data-title="Home" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
+    <!-- START_CUSTOM_CODE_home -->
+    <!-- END_CUSTOM_CODE_home -->
+    
+    <ul data-role="listview" data-bind="{source:categories}" data-template="dataListViewModelTemplatedrawer" data-filterable="{field: 'Product_Name', operator: 'contains'}">
+    </ul>
+ 		<script type="text/x-kendo-template" id="dataListViewModelTemplatedrawer">
+            <div class="menu">
+            	<img src="${Product_Image_URL}" alt="${Product_Name}" class="km-thumbnail">
+          		<h5 style="color:\#ff6600">${Product_Name}</h5>
+                <h6 style="color:\#aeaeae"><i>${cprice}</i></h6>
+            </div>
+    </script>
+    
+</div>
